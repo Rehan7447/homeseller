@@ -1,15 +1,39 @@
+import ContactForm from "./ContactForm";
+
 export default function Hero() {
   return (
-    <section className="bg-blue-600 text-white py-16 px-4 text-center">
-      <h1 className="text-4xl font-bold mb-4">
-        Sell Your Home Fast, Easy, and Hassle‑Free!
-      </h1>
-      <p className="text-lg mb-8">
-        We buy homes as‑is: No Fees · No Commissions · No Stress
-      </p>
-      <button className="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100">
-        Claim Your Free Offer
-      </button>
+    <section
+      className="relative bg-[url('/your-banner.jpg')] bg-cover bg-center text-white py-24 px-4 flex items-center justify-center"
+      style={{ minHeight: "80vh" }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      <div className="relative z-10 container mx-auto flex flex-col custom1050:flex-row items-center justify-between px-4 custom1050:px-8">
+        {/* Text Content */}
+        <div className="text-center custom1050:text-left custom1050:w-1/2 mb-8 custom1050:mb-0">
+          <h1 className="text-4xl custom1050:text-5xl font-bold mb-4">
+            Sell Your Home Fast, Easy, and Hassle‑Free!
+          </h1>
+          <p className="text-lg custom1050:text-xl mb-8">
+            We buy homes as‑is: No Fees · No Commissions · No Stress.
+          </p>
+
+          {/* Mobile CTA */}
+          <div className="custom1050:hidden">
+            <a
+              href="#contact"
+              className="inline-block bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90"
+            >
+              Get Your Offer
+            </a>
+          </div>
+        </div>
+
+        {/* Contact Form for Desktop */}
+        <div className="hidden custom1050:block custom1050:w-1/2">
+          <ContactForm />
+        </div>
+      </div>
     </section>
   );
 }

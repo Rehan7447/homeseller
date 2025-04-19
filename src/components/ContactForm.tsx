@@ -1,88 +1,141 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  message: string;
+  phone: string;
+  address: string;
+  acceptTerms: boolean;
 }
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    message: "",
+    phone: "",
+    address: "",
+    acceptTerms: false,
   });
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  ) => {
+    const { name, value, type, checked } = e.target as HTMLInputElement;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: handle form submission logic (e.g., API call)
     console.log("Form submitted:", formData);
-    alert("Thank you! We will be in touch soon.");
-    setFormData({ name: "", email: "", message: "" });
+    alert("Thank you! Your free offer request has been received.");
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      address: "",
+      acceptTerms: false,
+    });
   };
 
   return (
-    <section id="contact" className="py-16 px-4 bg-blue-50">
-      <div className="max-w-md mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white p-6 rounded-lg shadow"
+    <section
+      id="contact"
+      className="p-8 bg-white rounded-3xl shadow-lg max-w-lg mx-auto text-[var(--color-text)]"
+    >
+      <h2 className="text-3xl font-bold text-[var(--color-primary)] text-center mb-2">
+        Claim a Free Offer Today
+      </h2>
+      <p className="text-center text-base mb-6">
+        Receive your Free offer in as little as 24 hours.
+      </p>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            value={formData.firstName}
+            onChange={handleChange}
+            required
+            className="border-2 border-[var(--color-accent)] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+          />
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={formData.lastName}
+            onChange={handleChange}
+            required
+            className="border-2 border-[var(--color-accent)] rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+          />
+        </div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="border-2 border-[var(--color-accent)] rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          className="border-2 border-[var(--color-accent)] rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+        />
+        <textarea
+          name="address"
+          placeholder="Property Address"
+          value={formData.address}
+          onChange={handleChange}
+          rows={2}
+          required
+          className="border-2 border-[var(--color-accent)] rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+        ></textarea>
+
+        <label className="flex items-start space-x-2 text-sm">
+          <input
+            type="checkbox"
+            name="acceptTerms"
+            checked={formData.acceptTerms}
+            onChange={handleChange}
+            required
+            className="mt-1 accent-[var(--color-primary)]"
+          />
+          <span>
+            By submitting this form and signing up for texts, you consent to
+            receive marketing text messages from Local Home Buyers at the number
+            provided. Msg & data rates may apply. Consent is not a condition of
+            purchase. Read our{" "}
+            <a href="#" className="text-[var(--color-accent)] underline">
+              Privacy Policy
+            </a>{" "}
+            &{" "}
+            <a href="#" className="text-[var(--color-accent)] underline">
+              Terms of Services
+            </a>
+            .
+          </span>
+        </label>
+
+        <button
+          type="submit"
+          className="w-full bg-[var(--color-primary)] text-white py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90"
         >
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium mb-1">
-              Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-blue-500"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium mb-1">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-blue-500"
-            />
-          </div>
-          <div className="mb-6">
-            <label htmlFor="message" className="block text-sm font-medium mb-1">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={4}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring focus:border-blue-500"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
+          Claim Your Offer
+        </button>
+      </form>
     </section>
   );
 }

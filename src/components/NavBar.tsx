@@ -9,13 +9,18 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white text-charcoal shadow px-4 py-4 flex items-center justify-between">
+    <nav className="bg-white text-[var(--color-text)] shadow px-4 py-4 flex items-center justify-between">
       {/* Logo */}
-      <div className="text-2xl font-bold text-slate-blue">LocalHomeBuyers</div>
+      <div className="text-2xl font-bold text-[var(--color-primary)]">
+        LocalHomeBuyers
+      </div>
 
       {/* Hamburger Icon (Mobile View) */}
       <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-slate-blue text-2xl">
+        <button
+          onClick={toggleMenu}
+          className="text-[var(--color-primary)] text-2xl"
+        >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
@@ -26,40 +31,30 @@ export default function Navbar() {
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        <li className="py-2 px-4 hover:text-coral cursor-pointer md:py-0 md:px-0">
-          <a href="#who" className="text-charcoal hover:text-coral">
-            Who We Are
-          </a>
-        </li>
-        <li className="py-2 px-4 hover:text-coral cursor-pointer md:py-0 md:px-0">
-          <a href="#process" className="text-charcoal hover:text-coral">
-            Process
-          </a>
-        </li>
-        <li className="py-2 px-4 hover:text-coral cursor-pointer md:py-0 md:px-0">
-          <a href="#why" className="text-charcoal hover:text-coral">
-            Why Us
-          </a>
-        </li>
-        <li className="py-2 px-4 hover:text-coral cursor-pointer md:py-0 md:px-0">
-          <a href="#testimonials" className="text-charcoal hover:text-coral">
-            Testimonials
-          </a>
-        </li>
-        <li className="py-2 px-4 hover:text-coral cursor-pointer md:py-0 md:px-0">
-          <a href="#portfolio" className="text-charcoal hover:text-coral">
-            Portfolio
-          </a>
-        </li>
-        <li className="py-2 px-4 hover:text-coral cursor-pointer md:py-0 md:px-0">
-          <a href="#contact" className="text-charcoal hover:text-coral">
-            Contact
-          </a>
-        </li>
+        {[
+          { name: "Who We Are", href: "#who" },
+          { name: "Process", href: "#process" },
+          { name: "Why Us", href: "#why" },
+          { name: "Testimonials", href: "#testimonials" },
+          { name: "Portfolio", href: "#portfolio" },
+          { name: "Contact", href: "#contact" },
+        ].map((item) => (
+          <li
+            key={item.href}
+            className="py-2 px-4 cursor-pointer md:py-0 md:px-0"
+          >
+            <a
+              href={item.href}
+              className="text-[var(--color-text)] hover:text-[var(--color-accent)]"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
       </ul>
 
       {/* Call-to-Action Button */}
-      <button className="hidden md:block bg-coral text-white px-4 py-2 rounded-md hover:bg-opacity-90 cursor-pointer">
+      <button className="hidden md:block bg-[var(--color-accent)] text-white px-4 py-2 rounded-md hover:bg-opacity-90 cursor-pointer">
         Get Offer
       </button>
     </nav>

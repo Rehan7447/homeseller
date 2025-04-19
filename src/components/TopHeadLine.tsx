@@ -9,7 +9,7 @@ import {
 
 const TopHeadLine: React.FC = () => {
   return (
-    <div className="bg-gray-800 text-white text-sm py-2 px-4 flex justify-between items-center">
+    <div className="bg-[var(--color-primary)] text-white text-sm py-2 px-4 flex justify-between items-center">
       {/* Left Section */}
       <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-1">
@@ -28,7 +28,7 @@ const TopHeadLine: React.FC = () => {
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-gray-400"
+          className="hover:text-[var(--color-accent)]"
         >
           <FaInstagram />
         </a>
@@ -36,7 +36,7 @@ const TopHeadLine: React.FC = () => {
           href="https://linkedin.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-gray-400"
+          className="hover:text-[var(--color-accent)]"
         >
           <FaLinkedin />
         </a>
@@ -44,7 +44,7 @@ const TopHeadLine: React.FC = () => {
           href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-gray-400"
+          className="hover:text-[var(--color-accent)]"
         >
           <FaTwitter />
         </a>

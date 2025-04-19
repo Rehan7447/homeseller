@@ -12,7 +12,7 @@ export default function Navbar() {
     <nav className="bg-white text-[var(--color-text)] shadow px-4 py-4 flex items-center justify-between">
       {/* Logo */}
       <div className="text-2xl font-bold text-[var(--color-primary)]">
-        LocalHomeBuyers
+        Home Sellers
       </div>
 
       {/* Hamburger Icon (Mobile View) */}
@@ -28,7 +28,7 @@ export default function Navbar() {
       {/* Navigation Links */}
       <ul
         className={`absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent md:flex md:space-x-6 md:items-center md:opacity-100 transition-all duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          isOpen ? "opacity-100" : "opacity-0"
         }`}
       >
         {[
@@ -54,7 +54,7 @@ export default function Navbar() {
       </ul>
 
       {/* Call-to-Action Button */}
-      <button className="hidden md:block bg-[var(--color-accent)] text-white px-4 py-2 rounded-md hover:bg-opacity-90 cursor-pointer">
+      <button className="hidden md:block bg-[var(--color-primary)] text-white px-4 py-2 rounded-md hover:bg-opacity-90 cursor-pointer hover:bg-[var(--color-accent)] transition duration-300">
         Get Offer
       </button>
     </nav>

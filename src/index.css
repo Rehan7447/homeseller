@@ -2,8 +2,9 @@
 
 @theme {
   --color-primary: #6a5acd; /* Slate Blue */
-  --color-accent: #b5b5b5; /* Coral */
-  --color-background: #d3d3d3; /* Light Gray */
+  --color-accent: #8980c2; /* Coral */
+  --color-background: #e8e6e6; /* Light Gray */
+  --color-background-light: #f5f5f5; /* White Smoke */
   --color-text: #36454f; /* Charcoal */
 
   --breakpoint-custom1050: 65.625rem; /* 1050px */

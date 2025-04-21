@@ -32,7 +32,7 @@ export default function ContactForm() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const mailtoLink = `mailto:example@example.com?subject=Free Offer Request&body=${encodeURIComponent(
+    const mailtoLink = `mailto:bluebrowninv@gmail.com?subject=Free Offer Request&body=${encodeURIComponent(
       `First Name: ${formData.firstName}\nLast Name: ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nAddress: ${formData.address}`
     )}`;
 

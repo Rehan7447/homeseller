@@ -31,8 +31,13 @@ export default function ContactForm() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you! Your free offer request has been received.");
+
+    const mailtoLink = `mailto:example@example.com?subject=Free Offer Request&body=${encodeURIComponent(
+      `First Name: ${formData.firstName}\nLast Name: ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nAddress: ${formData.address}`
+    )}`;
+
+    window.location.href = mailtoLink;
+
     setFormData({
       firstName: "",
       lastName: "",
@@ -115,9 +120,9 @@ export default function ContactForm() {
           />
           <span>
             By submitting this form and signing up for texts, you consent to
-            receive marketing text messages from Local Home Buyers at the number
-            provided. Msg & data rates may apply. Consent is not a condition of
-            purchase. Read our{" "}
+            receive marketing text messages from Blue and Brown LLC at the
+            number provided. Msg & data rates may apply. Consent is not a
+            condition of purchase. Read our{" "}
             <a href="#" className="text-[var(--color-accent)] underline">
               Privacy Policy
             </a>{" "}

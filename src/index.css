@@ -9,3 +9,7 @@
 
   --breakpoint-custom1050: 65.625rem; /* 1050px */
 }
+
+html {
+  scroll-behavior: smooth;
+}

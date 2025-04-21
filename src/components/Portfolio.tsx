@@ -1,11 +1,15 @@
 import { useState } from "react";
 import land1 from "../assets/land1.jpeg";
 import land2 from "../assets/land2.png";
+import land3 from "../assets/land3.jpeg";
+import land4 from "../assets/land4.jpeg";
 import ImageModal from "./ImageModal";
 
 const homes = [
-  { img: land1, location: "Austin, TX" },
-  { img: land2, location: "Orlando, FL" },
+  { img: land1, location: "" },
+  { img: land2, location: "" },
+  { img: land3, location: "" },
+  { img: land4, location: "" },
 ];
 
 export default function Portfolio() {

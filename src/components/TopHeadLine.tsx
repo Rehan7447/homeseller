@@ -13,18 +13,30 @@ const TopHeadLine: React.FC = () => {
       {/* Left Section */}
       <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-1">
-          <FaPhoneAlt />
-          <span>+1 (123) 456-7890</span>
+          <a
+            href="tel:9107200173"
+            className="flex items-center space-x-1 hover:text-[var(--color-accent)]"
+          >
+            <FaPhoneAlt />
+            <span>9107200173</span>
+            {/* <span className="hidden sm:inline">9107200173</span> */}
+          </a>
         </div>
         <div className="flex items-center space-x-1">
-          <FaEnvelope />
-          <span>info@example.com</span>
+          <a
+            href="mailto:bluebrowninv@gmail.com"
+            className="flex items-center space-x-1 hover:text-[var(--color-accent)]"
+          >
+            <FaEnvelope />
+            <span>bluebrowninv@gmail.com</span>
+            {/* <span className="hidden sm:inline">bluebrowninv@gmail.com</span> */}
+          </a>
         </div>
       </div>
 
       {/* Right Section */}
       <div className="flex items-center space-x-4">
-        <a
+        {/* <a
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -47,7 +59,7 @@ const TopHeadLine: React.FC = () => {
           className="hover:text-[var(--color-accent)]"
         >
           <FaTwitter />
-        </a>
+        </a> */}
       </div>
     </div>
   );

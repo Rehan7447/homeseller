@@ -7,14 +7,12 @@ export default function WhoWeAre() {
           <h2 className="text-4xl font-bold text-[var(--color-primary)]">
             Your Trusted Partner in
             <br />
-            <span className="text-[var(--color-accent)]">
-              Selling Your Home
-            </span>
+            <span className="text-[var(--color-accent)]">Buying Your Home</span>
           </h2>
 
           <p className="text-lg">
-            We specialize in simplifying the home-selling process with fast,
-            hassle-free solutions. No repairs needed, no hidden fees.
+            We simplify the process with fast, hassle-free solutions. No repairs
+            needed, no hidden fees.
           </p>
 
           <div className="space-y-4">
@@ -32,11 +30,11 @@ export default function WhoWeAre() {
             </div>
           </div>
 
-          <div className="p-6 bg-white rounded-lg shadow-md border-l-4 border-[var(--color-primary)]">
+          {/* <div className="p-6 bg-white rounded-lg shadow-md border-l-4 border-[var(--color-primary)]">
             <p className="text-2xl font-bold text-[var(--color-primary)]">
               500+ Homes Bought & Counting
             </p>
-          </div>
+          </div> */}
 
           <button className="bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white font-bold py-3 px-8 rounded-full transition-all cursor-pointer">
             Contact Us Today

@@ -9,12 +9,12 @@ const faqData = [
       "We buy a wide variety of properties, including houses, condos, townhomes, and more. We are interested in properties in any condition, whether they need repairs or are move-in ready.",
   },
   {
-    question: "How does the selling process work with Local Home Buyers?",
+    question: "How does the selling process work with Blue and Brown LLC?",
     answer:
       "Our process is simple: contact us, receive a fair offer, and get paid quickly. No hidden fees, no stress.",
   },
   {
-    question: "What are the advantages of selling to Local Home Buyers?",
+    question: "What are the advantages of selling to Blue and Brown LLC?",
     answer:
       "You avoid realtor fees, long waiting times, and costly repairs. We offer fair, fast cash deals.",
   },
@@ -35,7 +35,7 @@ const faqData = [
 ];
 
 export default function FAQSection() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(-1);
 
   return (
     <section className="py-16 px-4 bg-[var(--color-background-light)]">

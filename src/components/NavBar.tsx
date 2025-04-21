@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,10 @@ export default function Navbar() {
   return (
     <nav className="bg-white text-[var(--color-text)] shadow px-4 py-4 flex items-center justify-between">
       {/* Logo */}
-      <div className="text-2xl font-bold text-[var(--color-primary)]">
-        Home Sellers
+      <div className="text-2xl font-bold text-[var(--color-primary)] cursor-pointer">
+        <a href="#home" className="flex items-center ml-0 custom1050:ml-6">
+          <img src={logo} alt="Logo" className="h-15" />
+        </a>
       </div>
 
       {/* Hamburger Icon (Mobile View) */}
@@ -29,16 +32,18 @@ export default function Navbar() {
       {/* Navigation Links */}
       <ul
         className={`absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent md:flex md:space-x-6 md:items-center md:opacity-100 transition-all duration-300 ${
-          isOpen ? "display-block z-10 pt-5" : "hidden"
+          isOpen
+            ? "display-block z-10 pt-5 mt-7 md:mt-0 custom1050:mt-0"
+            : "hidden"
         } `}
       >
         {[
           { name: "Who We Are", href: "#who" },
           { name: "Process", href: "#process" },
-          { name: "Why Us", href: "#why" },
-          { name: "Testimonials", href: "#testimonials" },
+          // { name: "Why Us", href: "#why" },
+          // { name: "Testimonials", href: "#testimonials" },
           { name: "Portfolio", href: "#portfolio" },
-          { name: "Contact", href: "#contact" },
+          { name: "Contact", href: "#contactBottom" },
         ].map((item) => (
           <li
             key={item.href}
@@ -55,7 +60,10 @@ export default function Navbar() {
       </ul>
 
       {/* Call-to-Action Button */}
-      <button className="hidden md:block bg-[var(--color-primary)] text-white px-4 py-2 rounded-md hover:bg-opacity-90 cursor-pointer hover:bg-[var(--color-accent)] transition duration-300">
+      <button
+        className="hidden md:block bg-[var(--color-primary)] text-white px-4 py-2 rounded-md hover:bg-opacity-90 cursor-pointer hover:bg-[var(--color-accent)] transition duration-300"
+        onClick={() => (window.location.href = "#contactBottom")}
+      >
         Get Offer
       </button>
     </nav>

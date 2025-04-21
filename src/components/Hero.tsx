@@ -13,10 +13,10 @@ export default function Hero() {
         {/* Text Content */}
         <div className="text-center custom1050:text-left custom1050:w-1/2 mb-8 custom1050:mb-0">
           <h1 className="text-4xl custom1050:text-5xl font-bold mb-4">
-            Sell Your Home Fast, Easy, and Hassle‑Free!
+            We Buy Land Fast, Easy, and Hassle‑Free!
           </h1>
           <p className="text-lg custom1050:text-xl mb-8">
-            We buy homes as‑is: No Fees · No Commissions · No Stress.
+            We buy land as‑is: No Fees · No Commissions · No Stress.
           </p>
 
           {/* Mobile CTA */}

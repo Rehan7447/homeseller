@@ -2,12 +2,11 @@ import Navbar from "../components/NavBar";
 import Hero from "../components/Hero";
 import WhoWeAre from "../components/WhoWeAre";
 import Process from "../components/Process";
-// import WhyUs from "../components/WhyUs";
-// import Testimonials from "../components/Testimonials";
-// import Portfolio from "../components/Portfolio";
-// import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import TopHeadLine from "../components/TopHeadLine";
+import FAQSection from "../components/FAQSection";
+import Portfolio from "../components/Portfolio";
+import { BottomForm } from "../components/BottomForm";
 
 export default function HomePage() {
   return (
@@ -21,6 +20,9 @@ export default function HomePage() {
       <Testimonials />
       <Portfolio />
       <ContactForm /> */}
+      <FAQSection />
+      <Portfolio />
+      <BottomForm />
       <Footer />
     </div>
   );

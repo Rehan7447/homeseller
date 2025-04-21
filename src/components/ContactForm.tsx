@@ -131,7 +131,7 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="w-full bg-[var(--color-primary)] text-white py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90"
+          className="w-full bg-[var(--color-primary)] text-white py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 cursor-pointer hover:bg-[var(--color-accent)] transition duration-300"
         >
           Claim Your Offer
         </button>

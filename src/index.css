@@ -4,7 +4,7 @@
   --color-primary: #00bfff; /* Deep Sky Blue */
   --color-accent: #fab77a; /* Peach Puff (light, bright brownish-beige) */
   --color-background: #ffffff; /* Pure White */
-  --color-background-light: #fefefe; /* Near-White */
+  --color-background-light: #f0f0f0; /* Near-White */
   --color-text: #2c2c2c; /* Deep Charcoal for contrast */
 
   --breakpoint-custom1050: 65.625rem; /* 1050px */

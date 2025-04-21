@@ -19,7 +19,8 @@ export default function Navbar() {
       <div className="md:hidden">
         <button
           onClick={toggleMenu}
-          className="text-[var(--color-primary)] text-2xl"
+          className="text-[var(--color-primary)] text-2xl cursor-pointer"
+          aria-label="Toggle navigation"
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -28,8 +29,8 @@ export default function Navbar() {
       {/* Navigation Links */}
       <ul
         className={`absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent md:flex md:space-x-6 md:items-center md:opacity-100 transition-all duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0"
-        }`}
+          isOpen ? "display-block z-10 pt-5" : "hidden"
+        } `}
       >
         {[
           { name: "Who We Are", href: "#who" },

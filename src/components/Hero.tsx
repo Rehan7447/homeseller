@@ -1,12 +1,13 @@
 import ContactForm from "./ContactForm";
+import land1 from "../assets/land1.jpeg";
 
 export default function Hero() {
   return (
     <section
-      className="relative bg-[url('/your-banner.jpg')] bg-cover bg-center text-white py-24 px-4 flex items-center justify-center"
-      style={{ minHeight: "80vh" }}
+      className="relative bg-cover bg-center text-white py-24 px-4 flex items-center justify-center"
+      style={{ minHeight: "80vh", backgroundImage: `url(${land1})` }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
       <div className="relative z-10 container mx-auto flex flex-col custom1050:flex-row items-center justify-between px-4 custom1050:px-8">
         {/* Text Content */}

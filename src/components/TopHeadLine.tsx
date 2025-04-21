@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const TopHeadLine: React.FC = () => {
   return (

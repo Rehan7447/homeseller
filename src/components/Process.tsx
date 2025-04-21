@@ -66,7 +66,12 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <button className="bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white font-bold py-3 px-8 rounded-full transition-all cursor-pointer shadow-lg">
+          <button
+            className="bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white font-bold py-3 px-8 rounded-full transition-all cursor-pointer shadow-lg"
+            onClick={() => {
+              window.location.href = "#contactBottom";
+            }}
+          >
             Start Your Free Consultation
           </button>
         </div>

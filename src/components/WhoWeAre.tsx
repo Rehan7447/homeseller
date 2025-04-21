@@ -1,3 +1,5 @@
+import land from "../assets/land4.jpeg";
+
 export default function WhoWeAre() {
   return (
     <section id="who" className="py-16 px-4 bg-[var(--color-background-light)]">
@@ -36,7 +38,12 @@ export default function WhoWeAre() {
             </p>
           </div> */}
 
-          <button className="bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white font-bold py-3 px-8 rounded-full transition-all cursor-pointer">
+          <button
+            className="bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white font-bold py-3 px-8 rounded-full transition-all cursor-pointer"
+            onClick={() => {
+              window.location.href = "#contactBottom";
+            }}
+          >
             Contact Us Today
           </button>
         </div>
@@ -45,7 +52,7 @@ export default function WhoWeAre() {
         <div className="lg:w-1/2 order-1 lg:order-2">
           <div className="aspect-[1.5/2] w-full max-w-[450px] mx-auto overflow-hidden rounded-2xl shadow-xl border-4 border-[var(--color-accent)]">
             <img
-              src="https://st.depositphotos.com/1054749/1585/i/450/depositphotos_15856801-stock-photo-young-african-american-businessman-holding.jpg"
+              src={land}
               alt="Our Team"
               className="w-full h-full object-cover"
             />

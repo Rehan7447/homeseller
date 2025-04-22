@@ -14,7 +14,7 @@ export default function Navbar() {
       {/* Logo */}
       <div className="text-2xl font-bold text-[var(--color-primary)] cursor-pointer">
         <a href="#home" className="flex items-center ml-0 custom1050:ml-6">
-          <img src={logo} alt="Logo" className="h-15" />
+          <img src={logo} alt="Logo" className="h-15 z-10" />
         </a>
       </div>
 
@@ -33,7 +33,7 @@ export default function Navbar() {
       <ul
         className={`absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent md:flex md:space-x-6 md:items-center md:opacity-100 transition-all duration-300 ${
           isOpen
-            ? "display-block z-10 pt-5 mt-14 md:mt-0 custom1050:mt-0"
+            ? "display-block z-8 pt-5 mt-13 sm:mt-12 md:mt-0 custom1050:mt-0"
             : "hidden"
         } `}
       >

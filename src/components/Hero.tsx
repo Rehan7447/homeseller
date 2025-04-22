@@ -22,7 +22,7 @@ export default function Hero() {
           {/* Mobile CTA */}
           <div className="custom1050:hidden">
             <a
-              href="#contact"
+              href="#contactBottom"
               className="inline-block bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90"
             >
               Get Your Offer

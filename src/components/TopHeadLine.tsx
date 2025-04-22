@@ -5,8 +5,8 @@ const TopHeadLine: React.FC = () => {
   return (
     <div className="bg-[var(--color-primary)] text-white text-sm py-2 px-4 flex flex-wrap justify-between items-center">
       {/* Left Section */}
-      <div className="flex flex-wrap items-center space-x-2 space-y-2 custom1050:space-x-10">
-        <div className="flex items-center space-x-1">
+      <div className="flex flex-wrap items-center space-x-5 custom1050:space-x-10">
+        <div className="flex items-center space-x-1 mb-1 sm:mb-0">
           <a
             href="tel:9107200173"
             className="flex items-center space-x-1 hover:text-[var(--color-accent)]"
@@ -15,7 +15,7 @@ const TopHeadLine: React.FC = () => {
             <span>(910) 7200173</span>
           </a>
         </div>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 mb-1 sm:mb-0">
           <a
             href="mailto:jordan@bluebrowninvestments.com"
             className="flex items-center space-x-1 hover:text-[var(--color-accent)]"

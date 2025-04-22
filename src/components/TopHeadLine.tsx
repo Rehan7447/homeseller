@@ -3,9 +3,9 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const TopHeadLine: React.FC = () => {
   return (
-    <div className="bg-[var(--color-primary)] text-white text-sm py-2 px-4 flex justify-between items-center">
+    <div className="bg-[var(--color-primary)] text-white text-sm py-2 px-4 flex flex-wrap justify-between items-center">
       {/* Left Section */}
-      <div className="flex items-center space-x-2 custom1050:space-x-10">
+      <div className="flex flex-wrap items-center space-x-2 space-y-2 custom1050:space-x-10">
         <div className="flex items-center space-x-1">
           <a
             href="tel:9107200173"
@@ -13,7 +13,6 @@ const TopHeadLine: React.FC = () => {
           >
             <FaPhoneAlt />
             <span>(910) 7200173</span>
-            {/* <span className="hidden sm:inline">(910) 7200173</span> */}
           </a>
         </div>
         <div className="flex items-center space-x-1">
@@ -23,13 +22,13 @@ const TopHeadLine: React.FC = () => {
           >
             <FaEnvelope />
             <span>jordan@bluebrowninvestments.com</span>
-            {/* <span className="hidden sm:inline">jordan@bluebrowninvestments.com</span> */}
           </a>
         </div>
       </div>
 
       {/* Right Section */}
       <div className="flex items-center space-x-4">
+        {/* Uncomment and add social links if needed */}
         {/* <a
           href="https://instagram.com"
           target="_blank"

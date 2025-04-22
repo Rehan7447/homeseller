@@ -5,7 +5,7 @@ const TopHeadLine: React.FC = () => {
   return (
     <div className="bg-[var(--color-primary)] text-white text-sm py-2 px-4 flex justify-between items-center">
       {/* Left Section */}
-      <div className="flex items-center space-x-10">
+      <div className="flex items-center space-x-2 custom1050:space-x-10">
         <div className="flex items-center space-x-1">
           <a
             href="tel:9107200173"

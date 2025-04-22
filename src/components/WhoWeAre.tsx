@@ -1,4 +1,4 @@
-import land from "../assets/land4.jpeg";
+import land from "../assets/land5.jpg";
 
 export default function WhoWeAre() {
   return (
@@ -50,7 +50,7 @@ export default function WhoWeAre() {
 
         {/* Portrait Image Container - Strict 1:2 Aspect Ratio */}
         <div className="lg:w-1/2 order-1 lg:order-2">
-          <div className="aspect-[1.5/2] w-full max-w-[450px] mx-auto overflow-hidden rounded-2xl shadow-xl border-4 border-[var(--color-accent)]">
+          <div className="aspect-[2/1.3] w-full custom1050:max-w-[650px] max-w-[450px] mx-auto overflow-hidden rounded-2xl shadow-xl border-4 border-[var(--color-accent)]">
             <img
               src={land}
               alt="Our Team"

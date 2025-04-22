@@ -2,7 +2,7 @@ import { useState } from "react";
 import land1 from "../assets/land1.jpeg";
 import land2 from "../assets/land2.png";
 import land3 from "../assets/land3.jpeg";
-import land4 from "../assets/land4.jpeg";
+import land4 from "../assets/land4.png";
 import ImageModal from "./ImageModal";
 
 const homes = [

@@ -3,8 +3,8 @@ export default function Footer() {
     <footer className="bg-white border-t border-gray-200 py-6 px-4">
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center">
         <p className="text-sm text-gray-600">
-          &copy; {new Date().getFullYear()} BlueAndBrownLLC. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} blue & brown properties LLC. All
+          rights reserved.
         </p>
         <ul className="flex space-x-4 mt-4 md:mt-0">
           <li>

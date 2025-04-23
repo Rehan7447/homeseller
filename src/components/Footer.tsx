@@ -10,6 +10,9 @@ export default function Footer() {
           <p className="text-sm text-gray-600 mt-2">
             1755 Archdale Drive, Charlotte, NC 28210
           </p>
+          <p className="text-sm text-gray-600 mt-1">
+            Mayer Drive, Highland NY 12528
+          </p>
         </div>
         <ul className="flex space-x-4 mt-4 md:mt-0">
           <li>

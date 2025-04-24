@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import React from "react";
-
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 py-6 px-4">

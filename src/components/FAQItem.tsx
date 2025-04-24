@@ -21,7 +21,7 @@ export default function FAQItem({
       }`}
     >
       <div className="flex justify-between items-center p-4">
-        <h3 className="text-lg font-semibold">{question}</h3>
+        <h3 className="text-lg font-semibold text-left">{question}</h3>
         <span className="text-2xl">{isOpen ? "-" : "+"}</span>
       </div>
       <div

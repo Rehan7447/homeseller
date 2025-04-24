@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import React from "react";
+
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200 py-6 px-4">
@@ -16,14 +19,20 @@ export default function Footer() {
         </div>
         <ul className="flex space-x-4 mt-4 md:mt-0">
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-blue-600">
+            <Link
+              to="/privacy-policy"
+              className="text-sm text-gray-600 hover:text-blue-600"
+            >
               Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-sm text-gray-600 hover:text-blue-600">
+            <Link
+              to="/terms-of-service"
+              className="text-sm text-gray-600 hover:text-blue-600"
+            >
               Terms of Service
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
